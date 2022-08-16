@@ -1,0 +1,15 @@
+{
+  "name": "nodejs-crud",
+  "version": "1.0.0",
+  "description": "rest apis of crud",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rushanthan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongodb": "^4.8.1"
+  }
+}
