@@ -1,5 +1,8 @@
+const router = require('./route');
 module.exports = function(app)
 {
+    router(app);
+    
     //define function
     app.use('/get',(req, res) =>{
         res.status(200).send('succesfully');
