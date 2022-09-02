@@ -1,8 +1,9 @@
 const router = require('./route');
-const {connect}= require('./src/db/mongo')
+const bodyParser = require("body-parser")
 module.exports = function(app)
 {
-    connect();
+   // connect();
+   app.use(bodyParser.json());
     router(app);
     
     //undifine function
@@ -11,6 +12,7 @@ module.exports = function(app)
     })
 
     app.use((err,req,res)=>{
+        console.log(err);
         res.status(500).json({message:'internal Server error',error:err});
     })
 }
